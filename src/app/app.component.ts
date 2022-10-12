@@ -70,6 +70,7 @@ export class AppComponent implements OnInit {
     for (let data1 in inverters) {
         const tempData: Inverter = inverters[data1];
         delete tempData.id;
+        tempData.name = tempData.device;
         const newListData: InverterData[] = []
         for (let data2 in tempData.data) {
           delete tempData.data[data2].inverterDeviceId;
